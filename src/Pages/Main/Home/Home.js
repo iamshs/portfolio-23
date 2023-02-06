@@ -7,7 +7,7 @@ const Home = () => {
   return (
    <>
     <section
-      className="flex items-center justify-center bg-cover min-h-screen bg-no-repeat bg-center lg:bg-fixed bg-unset"
+      className="flex items-center justify-center max-w-10xl bg-cover min-h-screen bg-no-repeat bg-center lg:bg-fixed bg-unset"
       style={{ backgroundImage: `url(${bg})`, backgroundColor: "#cccccc" }}
     >
       <div className="grid place-items-center">
