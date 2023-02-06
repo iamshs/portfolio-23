@@ -1,0 +1,20 @@
+[
+    {
+        "_id" : 1,
+        "name" : "Buy Smart",
+        "image1" : "https://i.ibb.co/pRxCQYm/de1.png",
+        "image2" : "https://i.ibb.co/dLj5tcs/screenshot.png",
+        "image3" : "https://i.ibb.co/d0SNqVw/screenshot-1.png",
+        "details" : "Buy smart is a single page E-commerce application where user can create account by both Email, password and Google.An user can also add products to cart ",
+        "technology" : "ReactJS , React-Router, Firebase , Tailwind CSS , DaisyUi,CSS3"
+    },
+    {
+        "_id" : 2,
+        "name" : "Figass",
+        "image1": "https://i.ibb.co/80zMMbs/mo1.png",
+        "image2": "https://i.ibb.co/80zMMbs/mo1.png",
+        "image3": "https://i.ibb.co/80zMMbs/mo1.png",
+        "details" : "It's a single page application for cafe and food services.All kinds of services have shown on the website in details.",
+        "technology" : "ReactJS , React-Router, SwiperJs ,CSS3"
+    }
+]

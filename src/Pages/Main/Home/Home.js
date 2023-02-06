@@ -1,11 +1,13 @@
 import React from "react";
 import bg from "../../../assets/bg.png";
 import { AiFillGithub } from "react-icons/ai";
+import Projects from "../../../components/Projects";
 
 const Home = () => {
   return (
+   <>
     <section
-      className="flex items-center justify-center bg-cover min-h-screen"
+      className="flex items-center justify-center bg-cover min-h-screen bg-no-repeat bg-center lg:bg-fixed bg-unset"
       style={{ backgroundImage: `url(${bg})`, backgroundColor: "#cccccc" }}
     >
       <div className="grid place-items-center">
@@ -27,6 +29,8 @@ const Home = () => {
       </div>
       
     </section>
+    <Projects />
+   </>
   );
 };
 
