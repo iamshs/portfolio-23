@@ -6,16 +6,24 @@ const Navbar = () => {
     const list = (
         <>
         <li>
-            <NavLink className='text-lg font-bold' to={'/'}> Home </NavLink> 
+            <NavLink  className={({ isActive }) =>
+              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+            }  to={'/'}> Home </NavLink> 
         </li>
         <li>
-            <NavLink className='text-lg font-bold' to={'/contact'}> Contact </NavLink> 
+            <NavLink className={({ isActive }) =>
+              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+            }   to={'/contact'}> Contact </NavLink> 
         </li>
         <li>
-            <NavLink className='text-lg font-bold' to={'/about'}> About </NavLink> 
+            <NavLink className={({ isActive }) =>
+              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+            }  to={'/about'}> About </NavLink> 
         </li>
         <li>
-            <NavLink className='text-lg font-bold' to={'/blog'}> Blog </NavLink> 
+            <NavLink className={({ isActive }) =>
+              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+            }  to={'/blog'}> Blog </NavLink> 
         </li>
         </>
     )
