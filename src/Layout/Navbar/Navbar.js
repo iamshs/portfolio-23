@@ -1,28 +1,29 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+
 const Navbar = () => {
 
     const list = (
         <>
         <li>
             <NavLink  className={({ isActive }) =>
-              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+              isActive ?'text-xl font-bold bg-none text-info' : 'text-lg font-bold'
             }  to={'/'}> Home </NavLink> 
         </li>
         <li>
             <NavLink className={({ isActive }) =>
-              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+              isActive ?'text-xl font-bold bg-none text-info' : 'text-lg font-bold'
             }   to={'/contact'}> Contact </NavLink> 
         </li>
         <li>
             <NavLink className={({ isActive }) =>
-              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+              isActive ?'text-xl font-bold bg-none text-info' : 'text-lg font-bold'
             }  to={'/about'}> About </NavLink> 
         </li>
         <li>
             <NavLink className={({ isActive }) =>
-              isActive ?'text-xl font-bold bg-none text-primary' : 'text-lg font-bold'
+              isActive ?'text-xl font-bold bg-none text-info' : 'text-lg font-bold'
             }  to={'/blog'}> Blog </NavLink> 
         </li>
         </>
@@ -39,7 +40,9 @@ const Navbar = () => {
         {list}
       </ul>
     </div>
-    <Link to={'/'} className="btn btn-ghost normal-case text-xl">ShoLaymaN</Link>
+    <Link to={'/'} className="btn btn-ghost normal-case text-white text-3xl">
+     <span className='text-5xl text-accent'>S</span>holayMAN
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

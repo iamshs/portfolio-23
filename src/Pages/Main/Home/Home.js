@@ -2,6 +2,7 @@ import React from "react";
 import bg from "../../../assets/bg.png";
 import { AiFillGithub } from "react-icons/ai";
 import Projects from "../../../components/Projects";
+import './Home.css'
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="grid place-items-center">
-        <h1 className="lg:text-6xl md:text-5xl text-2xl font-semibold text-secondary ">
+        <h1 className="lg:text-6xl md:text-5xl text-2xl font-semibold text-secondary animate-charcter ">
           Hello , I'm MD SHOLAYMAN
         </h1>
         <p className="lg:text-2xl text-lg font-semibold  mt-8">Welcome to my portfolio.</p>
