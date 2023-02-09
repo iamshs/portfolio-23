@@ -1,7 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 .wrapper.two {
     font-size: 5rem;
-    font-family: "Play", sans-serif;
+    font-family: 'Merienda', sans-serif;
 }
 .neon h3 {
     margin: 1rem auto;
