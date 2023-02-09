@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Project = ({ project }) => {
-  const {name,image1 , client , live,server} = project
+  const {name,image1 , client , live,server,_id} = project
+  const navigate = useNavigate()
 
   const goToLiveSite =() =>{
     <Link to={window.open(`${live}`)}></Link>
@@ -12,6 +13,9 @@ const Project = ({ project }) => {
   }
   const goToServerGit =() =>{
     <Link to={window.open(`${server}`)}></Link>
+  }
+  const handleDetails =() =>{
+   navigate(`details/${_id}`)
   }
   return (
     <div className="card rounded max-w-md bg-[#0D0D0D] shadow-xl place-items-center grid ">
@@ -26,7 +30,7 @@ const Project = ({ project }) => {
           server && <button onClick={goToServerGit} className="btn btn-secondary btn-sm ml-2">Server Git</button>
         }
         </div> 
-        <button  className="btn btn-outline w-[65%] font-bold rounded lg:text-lg  lg:my-8 my-6">Project Details</button>
+        <button onClick={handleDetails}  className="btn btn-outline w-[65%] font-bold rounded lg:text-lg  lg:my-8 my-6">Project Details</button>
       
     </div>
   );
