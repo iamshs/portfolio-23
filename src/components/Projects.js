@@ -1,22 +1,21 @@
 import React from "react";
 import useProjects from "../hooks/useProjects";
 import Project from "./Project";
+import './Styles/Projects.css'
 
 const Projects = () => {
-  const [projects, isLoading, isError, error] = useProjects();
+  const [projects, isLoading] = useProjects();
   if (isLoading) {
     return <button className="btn loading">loading</button>;
   }
 
   return (
     <section className="px-4">
-      <div className="wrapper.two">
-        <div className="neon">
-          <h3 className="lg:text-5xl md:text-4xl text-3xl font-semibold text-center lg:py-20 md:py-20 py-10">
-            My Projects
-          </h3>
+    <div class="wrapper six text-center lg:my-20 my-14">
+        <div>
+            <h3 class="flicker">MY PROJECTS</h3>
         </div>
-      </div>
+    </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project) => (
           <Project key={project._id} project={project} />

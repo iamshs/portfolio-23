@@ -32,16 +32,16 @@ const ProjectDetails = () => {
   };
 
   return (
-    <div className="flex flex-col bg-neutral-800 px-10 lg:flex-row items-start justify-center">
-      <div className="lg:max-w-5xl lg:px-10 ">
-        <div className="wrapper two lg:my-20">
+    <div className="flex flex-col bg-neutral-800 lg:px-10 px-5 md:px-8 lg:flex-row items-start justify-center">
+      <div className="lg:max-w-5xl lg:px-10 md:my-10 ">
+        <div className="wrapper two lg:my-20 ">
           <div className="neon">
             <h3> {arr.name} </h3>
           </div>
         </div>
-        <h4 className="lg:text-3xl md:text-2xl text-2xl lg:my-10"> {arr.details} </h4>
-        <h4 className="text-2xl my-8 lg:my-10">
-          <span className="lg:text-4xl md:text-3xl text-2xl text-accent  font-bold">
+        <h4 className="lg:text-3xl md:text-3xl text-xl lg:my-10"> {arr.details} </h4>
+        <h4 className="lg:text-3xl md:text-3xl text-xl my-8 lg:my-10">
+          <span className="lg:text-4xl md:text-3xl text-xl text-accent  font-bold">
             Technology used :
           </span>{" "}
           {arr.technology}
@@ -49,20 +49,20 @@ const ProjectDetails = () => {
         <div>
           <button
             onClick={goToLiveSite}
-            className="btn btn-primary btn-sm md:btn-md lg:btn-lg mr-2"
+            className="btn btn-primary btn-sm md:btn-md lg:btn-lg m-2"
           >
             Live Site
           </button>
           <button
             onClick={goToClientGit}
-            className="btn btn-accent btn-sm md:btn-md lg:btn-lg ml-2"
+            className="btn btn-accent btn-sm md:btn-md lg:btn-lg m-2"
           >
             Client Git
           </button>
           {arr.server && (
             <button
               onClick={goToServerGit}
-              className="btn btn-secondary btn-sm md:btn-md lg:btn-lg ml-4"
+              className="btn btn-secondary btn-sm md:btn-md lg:btn-lg m-2"
             >
               Server Git
             </button>
