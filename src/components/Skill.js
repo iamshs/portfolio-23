@@ -11,7 +11,7 @@ import './Styles/Skill.css'
 
 const Skill = () => {
   return (
-    <section className="skill-container">
+    <section className="skill-container lg:py-20 md:py-16 py-10">
         <h2 className="my-10 lg:py-20 text-center md:my-16">MY SKILLS</h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 xl:grid-cols-5  gap-14 lg:pl-[50px] ml-24 md:ml-40">
         <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={htmlIcon} alt="" />
