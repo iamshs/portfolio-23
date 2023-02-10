@@ -13,7 +13,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="grid place-items-center">
-          <h1 className="animate-charcter ">
+          <h1 className="animate-character ">
             Hello , I'm MD SHOLAYMAN
           </h1>
           <p className="lg:text-3xl text-xl font-semibold  mt-8">

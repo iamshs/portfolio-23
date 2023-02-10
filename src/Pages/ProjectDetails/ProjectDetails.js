@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Spinner from "../../components/Spinner";
 import "./ProjectDetails.css";
 
 const ProjectDetails = () => {
@@ -15,7 +16,7 @@ const ProjectDetails = () => {
       });
   }, []);
   if (loading) {
-    return <button className="btn bg-white text-black loading">loading</button>;
+    return <Spinner />;
   }
   let arr;
 
