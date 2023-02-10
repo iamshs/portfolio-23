@@ -4,6 +4,7 @@ import About from "../Pages/Main/About/About";
 import Blog from "../Pages/Main/Blog/Blog";
 import Contact from "../Pages/Main/Contact/Contact";
 import Home from "../Pages/Main/Home/Home";
+import Privacy from "../Pages/Privacy/Privacy";
 import ProjectDetails from "../Pages/ProjectDetails/ProjectDetails";
 
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path : 'details/:id',
                 element : <ProjectDetails />
+            },
+            {
+                path : 'privacy',
+                element : <Privacy />
             },
             
         ]
