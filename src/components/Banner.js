@@ -2,6 +2,8 @@ import React from 'react';
 import './Styles/Banner.css'
 import bg from "../assets/bg.png";
 import { AiFillGithub } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+import resume from '../assets/Md Sholayman.pdf'
 
 const Banner = () => {
     return (
@@ -22,18 +24,20 @@ const Banner = () => {
           </p>
           <p className="lg:text-3xl text-xl mt-2 font-semibold text-white">
             Want to learn more about me? Visit my
-            <button className="btn btn-active btn-link text-success font-bold">
+            <Link to={{
+              pathname: "https://github.com/iamshs"
+            }} target="_blank" className="btn btn-active btn-link text-success font-bold">
               <span className="mr-2 text-lg">GitHub</span>
               <AiFillGithub size={25} />
-            </button>
+            </Link>
           </p>
           <div className="flex flex-col lg:flex-row md:flex-row lg:mt-10 md:mt-8 mt-5  ">
-            <button className="btn lg:text-lg btn-primary m-2">
+            <Link to={resume} target="_blank" download className="btn lg:text-lg btn-primary m-2">
               Download Resume
-            </button>
-            <button className="btn btn-accent lg:text-lg m-2">
+            </Link>
+            <Link to={'/contact'} className="btn btn-accent lg:text-lg m-2">
               Contact Me
-            </button>
+            </Link>
           </div>
         </div>
       </section>
