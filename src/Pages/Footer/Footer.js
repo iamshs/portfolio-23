@@ -6,13 +6,13 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer className="grid lg:place-items-center place-items-start p-10">
-      <h1 className="text-3xl text-accent font-semibold title">MD SHOLAYMAN</h1>
-      <div className="text-center ont-semibold text-2xl my-5 ">
+    <footer className=" bg-neutral-800 grid lg:place-items-center place-items-start p-10">
+      <h1 className="text-3xl md:text-3xl text-2xl text-accent font-semibold title">MD SHOLAYMAN</h1>
+      <div className="text-center ont-semibold lg:text-2xl text-xl my-5 ">
         <span dangerouslySetInnerHTML={{ __html: "&copy;" }} />
         All CopyRights Reserved {year}
       </div>
-      <Link className="text-2xl text-white" to={'/privacy'} >Privacy Policy</Link>
+      <Link className="lg:text-2xl text-xl text-white" to={'/privacy'} >Privacy Policy</Link>
     </footer>
   );
 };

@@ -1,4 +1,5 @@
-import React from "react";
+import React , { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import "./Styles/ContactForm.css";
 import { MdEmail } from "react-icons/md";
 import { MdCall } from "react-icons/md";
@@ -7,29 +8,49 @@ import { ImFacebook2 } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
+
 
 const ContactForm = () => {
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_mk3o9zp', 'template_26p3xbm', form.current, 'ucZWwsP_PL0klx1C6')
+      .then((result) => {
+         if(result.status === 200){
+            toast.success('Message sent');
+            e.target.reset()
+         }
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
-    <section className="bg-neutral-800 mt-10 lg:p-16 md:p-12 p-6 flex flex-col lg:flex-row items-start justify-around">
+    <section className="mt-10 lg:p-16 md:p-12 p-6 flex flex-col lg:flex-row items-start justify-around">
       <div className="lg:max-w-[50%] ">
         <h4 className="lg:text-5xl md:text-3xl text-xl font-bold text-white">Contact Me</h4>
         <h1 className="lg:text-6xl md:text-4xl text-2xl my-3 contact-header font-semibold">
           GET IN TOUCH
         </h1>
-        <form className="my-10">
+        <form className="my-10" ref={form} onSubmit={sendEmail}>
           <input
             type="text"
+            name="user_name"
             placeholder="Your Name"
             className=" w-full font-bold  lg:text-3xl text-xl md:text-2xl my-6 p-4  "
           />
           <input
             type="email"
+            name="user_email"
             placeholder="Email Id"
             className=" w-full font-bold  lg:text-3xl text-xl md:text-2xl my-6 p-4  "
           />
           <textarea
             type="text"
             rows={"6"}
+            name="message"
             placeholder="Message"
             className=" w-full font-bold  lg:text-3xl text-xl md:text-2xl my-6 p-4  "
           ></textarea>
