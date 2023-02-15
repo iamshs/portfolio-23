@@ -19,10 +19,10 @@ const Banner = () => {
           <p className="lg:text-2xl text-lg text-info font-semibold  mt-2">
            Junior Web Developer
           </p>
-          <p className="lg:text-3xl text-xl font-semibold  mt-8">
+          <p className="lg:text-3xl text-lg md:text-xl font-semibold  mt-8">
             Welcome to my portfolio.
           </p>
-          <p className="lg:text-3xl text-xl mt-2 font-semibold text-white">
+          <p className="lg:text-3xl text-md md:text-xl mt-2 font-semibold text-white">
             Want to learn more about me? Visit my
             <Link to={{
               pathname: "https://github.com/iamshs"
@@ -32,11 +32,15 @@ const Banner = () => {
             </Link>
           </p>
           <div className="flex flex-col lg:flex-row md:flex-row lg:mt-10 md:mt-8 mt-5  ">
-            <Link to={resume} target="_blank" download className="btn lg:text-lg btn-primary m-2">
-              Download Resume
+            <Link to={resume} target="_blank" download >
+           <button className="btn lg:text-lg text-xs md:text-md btn-primary m-2">
+           Download Resume
+           </button>
             </Link>
-            <Link to={'/contact'} className="btn btn-accent lg:text-lg m-2">
-              Contact Me
+            <Link to={'/contact'} className="btn lg:text-lg text-xs md:text-md btn-accent  m-2">
+             <button>
+             CONTACT ME
+             </button>
             </Link>
           </div>
         </div>

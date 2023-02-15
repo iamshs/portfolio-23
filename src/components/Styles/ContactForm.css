@@ -8,3 +8,7 @@
 .submit-btn{
     border-radius: 10px 10px 35px 10px;
 }
+
+.link:hover{
+    color: #b5b3b3;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import './Styles/Project.css'
 
 const Project = ({ project }) => {
   const {name,image1 , client , live,server,_id} = project
@@ -18,21 +20,22 @@ const Project = ({ project }) => {
    navigate(`details/${_id}`)
   }
   return (
-    <div className="card rounded max-w-md bg-[#0D0D0D] shadow-xl place-items-center grid ">
+    <motion.div  whileHover={{ scale: [null, 1.09, 1.12] }}
+    transition={{ duration: 0.2 }} className="card box rounded max-w-xs lg:max-w-md bg-[#0D0D0D] shadow-xl place-items-center grid ">
       
         <img src={image1} alt="" />
         <h1 className="lg:text-4xl text-3xl font-bold mt-10 mb-4 ">{name} </h1>
         <div className="flex justify-center ">
         
-        <button onClick={goToLiveSite} className="btn btn-primary btn-sm mr-2">Live Site</button>
-        <button onClick={goToClientGit} className="btn btn-accent btn-sm ml-2">Client Git</button>
+        <button onClick={goToLiveSite} className="btn btn-primary btn-xs lg:btn-sm mr-2">Live Site</button>
+        <button onClick={goToClientGit} className="btn btn-accent btn-xs lg:btn-sm ml-2">Client Git</button>
         {
-          server && <button onClick={goToServerGit} className="btn btn-secondary btn-sm ml-2">Server Git</button>
+          server && <button onClick={goToServerGit} className="btn btn-secondary btn-xs lg:btn-sm ml-2">Server Git</button>
         }
         </div> 
-        <button onClick={handleDetails}  className="btn btn-outline w-[65%] font-bold rounded lg:text-lg  lg:my-8 my-6">Project Details</button>
+        <button onClick={handleDetails}  className="btn btn-outline w-[65%] font-bold rounded lg:text-lg text-xs md:text-md lg:my-8 my-6">Project Details</button>
       
-    </div>
+    </motion.div>
   );
 };
 

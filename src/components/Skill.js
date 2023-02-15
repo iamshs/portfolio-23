@@ -12,16 +12,16 @@ import './Styles/Skill.css'
 const Skill = () => {
   return (
     <section className="skill-container lg:my-20 md:my-16 my-10 bg-neutral-800">
-        <h2 className=" lg:py-16 md:py-12 py-8 text-center md:my-16">MY SKILLS</h2>
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 pb-8 md:pb-12 lg:pb-16 grid-cols-2 xl:grid-cols-5  gap-14 lg:pl-[50px] ml-24 md:ml-40">
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={htmlIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={cssIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={bootIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={tailIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={jsIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={reactIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={exIcon} alt="" />
-        <img className="lg:w-[196px] w-[90px] md:w-[144px] rotate " src={moIcon} alt="" />
+        <h2 className=" lg:py-12 md:py-8 py-5 text-center md:my-16">MY SKILLS</h2>
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 pb-8 md:pb-16 lg:pb-20 grid-cols-2 xl:grid-cols-5  gap-14 lg:pl-[50px] ml-24 md:ml-40">
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={htmlIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={cssIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={bootIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={tailIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={jsIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={reactIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={exIcon} alt="" />
+        <img className="lg:w-[150px] w-[60px] md:w-[100px] rotate " src={moIcon} alt="" />
       </div>
     </section>
   );
