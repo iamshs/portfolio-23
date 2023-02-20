@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import './Styles/Project.css'
+import {item} from '../helpers/framer-motion'
+
 
 const Project = ({ project }) => {
   const {name,image1 , client , live,server,_id} = project
@@ -20,8 +22,7 @@ const Project = ({ project }) => {
    navigate(`details/${_id}`)
   }
   return (
-    <motion.div  whileHover={{ scale: [null, 1.09, 1.12] }}
-    transition={{ duration: 0.2 }} className="card box rounded max-w-xs lg:max-w-md bg-[#0D0D0D] shadow-xl place-items-center grid ">
+    <motion.div variants={item}  className="card box rounded max-w-xs lg:max-w-md bg-[#0D0D0D] shadow-xl place-items-center grid ">
       
         <img src={image1} alt="" />
         <h1 className="lg:text-4xl text-3xl font-bold mt-10 mb-4 ">{name} </h1>
